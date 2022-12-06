@@ -7,14 +7,14 @@
           v-bind:class="[book.read ? 'bg-warning' : 'bg-success text-dark']">
         <h2 @click="changeIndex(index)">{{ book.title }}</h2>
         <div v-show="indexBook === index">
-        <h4>Author name: {{ book.authorName }}</h4>
-        <p>Release year: {{ book.releaseYear }}</p>
-        <button @click="moveReadOrUnread(index)"
-                class='mx-3'
-                v-bind:class="[book.read ? 'btn btn-success' : 'btn btn-primary']">
-          {{ book.read ? 'Unread' : 'Read' }}
-        </button>
-        <button @click="deleteBook(book)" class="btn btn-danger">Delete</button>
+          <h4>Author name: {{ book.authorName }}</h4>
+          <p>Release year: {{ book.releaseYear }}</p>
+          <button @click="moveReadOrUnread(index)"
+                  class='mx-3'
+                  v-bind:class="[book.read ? 'btn btn-success' : 'btn btn-primary']">
+            {{ book.read ? 'Unread' : 'Read' }}
+          </button>
+          <button @click="deleteBook(book)" class="btn btn-danger">Delete</button>
         </div>
       </li>
     </ul>

@@ -9,8 +9,7 @@
                 :show-books="showBook"
                 :item-list="books"
                 name="Books"
-                v-bind:class="[ !showBook ? 'bg-secondary rounded-2  w-25 m-auto text-dark' :' w-25 mx-auto']"
-      />
+                v-bind:class="[ !showBook ? 'bg-secondary rounded-2  w-25 m-auto text-dark' :' w-25 mx-auto']"/>
     </div>
     <div class="container mt-5 ">
       <div class="row d-flex justify-content-between">
@@ -23,11 +22,10 @@
                     :index-book="indexUnreadBook"
                     :item-list="unreadBooks"
                     name="Unread books"
-                    v-bind:class="{'bg-success rounded-2 text-dark mx-auto w-50' : !isUnreadBooks }"
-          />
+                    v-bind:class="{'bg-success rounded-2 text-dark mx-auto w-50' : !isUnreadBooks }"/>
         </div>
         <div class="col">
-          <ItemList  @move-read-unread="moveBook"
+          <ItemList @move-read-unread="moveBook"
                     @show-read-unread-books="showReadBooks"
                     @delete-book="deleteBook"
                     @change-index="changeIndexReadBook"
